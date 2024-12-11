@@ -39,7 +39,15 @@ body {
   color: #1e1e1e;
   font-weight: bold;
   padding: 10px 12px;
+  border: 1px solid transparent; 
+  border-radius: 10px;
+  transition: all .5s ease;
 }
+
+.nav a:hover {
+  border-color: #333;
+}
+
 
 .svg-container {
   display: flex;
@@ -163,6 +171,10 @@ td {
   border: 1px solid #333;
   transition: .5s all ease-in-out;
 }
+#checkout-btn:hover{
+  background-color: #333;
+  color: white;
+}
 
 .footer {
   display: flex;
@@ -223,6 +235,8 @@ td {
     width: 100%;
     min-width: 280px;
   }
+  
+
   a {
     width: 100%;
     min-width: 280px;
@@ -233,5 +247,34 @@ td {
   }
   .footer-col{
     margin: 10px auto;
+  }
+}
+
+
+
+.remove-btn:hover,
+.cart-icon:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: calc(1);
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
   }
 }
